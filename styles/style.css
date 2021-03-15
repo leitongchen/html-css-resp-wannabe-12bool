@@ -18,15 +18,13 @@
 }
 
 /* BLOCCO LEZIONI */
-#lezioni .row img {
-  /* per centrare orizzontalmente */
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-}
-
 #lezioni {
   text-align: center;
+}
+
+#lezioni [class*="col-"]:not(:last-child),
+#lezioni h1 {
+  margin-bottom: 40px;
 }
 
 /* BLOCCO STEPS */
@@ -38,13 +36,17 @@
   margin-bottom: 40px;
 }
 
+#steps [class*="col-"] {
+  margin-top: 40px;
+}
+
 /* BLOCCO PERCHE */
 #why {
   text-align: center;
 }
 
 #why [class*="col-"] {
-  margin-top: 80px;
+  margin-top: 40px;
 }
 
 #why .row img {
@@ -53,14 +55,30 @@
   padding: 30px
 }
 
-
 /* COMMON */
 img {
   height: 200px;
 }
 
 
+
 /* risoluzione XS - small devices */
 @media all and (max-width: 767px) {
   
+  img {
+    height: 150px;
+  }
+
+  .container:nth-child(odd) {
+    background-color: rgb(240, 237, 192);
+  }  
+}
+
+/* risoluzione MD - medium devices */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+  #steps [class*="col-"] {
+    margin-bottom: 40px;
+  }
+
 }
